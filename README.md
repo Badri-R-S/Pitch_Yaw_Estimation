@@ -1,7 +1,7 @@
-# Pitch and Yaw Estimation using Monocular SLAM pipeline
+# Pitch and Yaw Estimation using a Monocular SLAM pipeline
 
 ## Introduction
- In autonomous vehicles that use cameras, the camera is not exactly aligned to the vehicle. There is some pitch and yaw angle between the camera and the vehicle, which can vary between installations. Estimating these angles is essential for accurate control of the vehicle. Hence in this project, a SLAM pipeline has been implemented to estimate the direction of travel (pitch and yaw). There are 5 videos in the labeled/ directory. Each video is also associated with a txt files tat consists of the pitch and yaw value for each frame of the video. The objective is to estimate the pitch and yaw values and evaluate the results using the eval.py file.
+ In autonomous vehicles that use cameras, the camera is not exactly aligned with the vehicle. There is some pitch and yaw angle between the camera and the vehicle, which can vary between installations. Estimating these angles is essential for accurate control of the vehicle. Hence in this project, a SLAM pipeline has been implemented to estimate the direction of travel (pitch and yaw). There are 5 videos in the labeled/ directory. Each video is also associated with a txt files tat consists of the pitch and yaw value for each frame of the video. The objective is to estimate the pitch and yaw values and evaluate the results using the eval.py file.
 
  <p align="center">
   <img src="resources/Frame.png" width="500">
@@ -14,9 +14,7 @@
  <p align="center">
   <img src="resources/Segmentation.png" width="500">
 </p>
-
-      The hood of the car and dynamic objects are masked using DeeplabV3
-
+ 
 * Find feature points in one frame and use Lucas-Kanade Optical Flow method, to estimate the displacement and direction of motion onto the next frame.
 
  <p align="center">
@@ -30,8 +28,9 @@
   <img src="resources/Final.png" width="500">
 </p>
 
-      The blue dot is the estimated direction of travel as seen in image coordinates and the white dot is the actual direction of travel as seen in image coordinates.
-
+ <div style="text-align:center">
+ The blue dot is the estimated direction of travel as seen in image coordinates and the white dot is the actual direction of travel as seen in image coordinates.
+ </div>
 
 ## Requirements
 
