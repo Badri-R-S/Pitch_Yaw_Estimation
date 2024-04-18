@@ -1,7 +1,7 @@
 # Pitch and Yaw Estimation using a Monocular SLAM pipeline
 
 ## Introduction
- In autonomous vehicles that use cameras, the camera is not exactly aligned with the vehicle. There is some pitch and yaw angle between the camera and the vehicle, which can vary between installations. Estimating these angles is essential for accurate control of the vehicle. Hence in this project, a SLAM pipeline has been implemented to estimate the direction of travel (pitch and yaw). There are 5 videos in the labeled/ directory. Each video is also associated with a txt files tat consists of the pitch and yaw value for each frame of the video. The objective is to estimate the pitch and yaw values and evaluate the results using the eval.py file.
+ In autonomous vehicles that use cameras, the camera is not exactly aligned with the vehicle. There is some pitch and yaw angle between the camera and the vehicle, which can vary between installations. Estimating these angles is essential for accurate control of the vehicle. Hence in this project, a SLAM pipeline has been implemented to estimate the direction of travel (pitch and yaw). There are 5 videos in the labeled/ directory. Each video is also associated with a txt files that consists of the pitch and yaw value for each frame of the video. The objective is to estimate the pitch and yaw values of these vehicles.
 
  <p align="center">
   <img src="resources/Frame.png" width="500">
