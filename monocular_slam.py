@@ -49,11 +49,9 @@ def slam(p0, p1):
 
 
 def get_center_of_motion(t):
-    angles = np.arccos(t)
-    yaw = -(angles[2, 0] - np.pi)
-    pitch = -(angles[1, 0] - np.pi / 2)
+    yaw = -np.arctan2(t[0, 0], t[2, 0])  # Using t_x and t_z
+    pitch = -np.arctan2(t[1, 0], np.sqrt(t[0, 0]**2 + t[2, 0]**2))  # Using t_y and horizontal distance
     return np.clip(np.array([yaw, pitch]), a_min=(-constants.MAX_YAW, -constants.MAX_PITCH), a_max=(constants.MAX_YAW, constants.MAX_PITCH))
-
 
 
 def get_matches_orb(train_img, query_img):
